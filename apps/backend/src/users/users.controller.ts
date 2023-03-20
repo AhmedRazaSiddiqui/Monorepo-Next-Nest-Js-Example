@@ -1,5 +1,6 @@
+import { UserEntity } from 'src/entities/user.entity';
 import { UsersService } from './users.service';
-import { Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 
 @Controller('users')
 export class UserController {
@@ -9,7 +10,7 @@ export class UserController {
     return this.userService.findAll();
   }
   @Post('/create')
-  create() {
-    return this.userService.createUser();
+  create(@Body() User: UserEntity) {
+    return this.userService.createUser(User);
   }
 }
