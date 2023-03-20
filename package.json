@@ -1,0 +1,16 @@
+{
+  "name": "Mandi",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "docs",
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "dotenv -- turbo run dev"
+  },
+  "dependencies": {
+    "dotenv-cli": "^7.1.0"
+  }
+}
