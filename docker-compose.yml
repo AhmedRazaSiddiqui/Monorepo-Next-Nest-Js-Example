@@ -1,0 +1,11 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-mysqldb}
+      MYSQL_USER: ${MYSQL_USER:-root}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-password}
